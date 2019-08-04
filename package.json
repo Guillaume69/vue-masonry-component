@@ -1,0 +1,23 @@
+{
+  "name": "vue-masonry-component",
+  "version": "1.0.0",
+  "description": "Masonry layout vue.js component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guillaume69/vue-masonry-component.git"
+  },
+  "keywords": [
+    "vuejs",
+    "masonry"
+  ],
+  "author": "Guillaume Marchand",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Guillaume69/vue-masonry-component/issues"
+  },
+  "homepage": "https://github.com/Guillaume69/vue-masonry-component#readme"
+}

@@ -1,6 +1,6 @@
 {
   "name": "vue-masonry-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Masonry layout vue.js component",
   "main": "./dist/index.js",
   "scripts": {

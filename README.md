@@ -30,7 +30,7 @@ in your vue files
 </template>
 ```
 
-### Properties & example
+### Properties & examples
 
 all the props and events are available according to the [original masonry plugin](http://masonry.desandro.com/options.html).
 

@@ -1,5 +1,5 @@
 /*!
- * vue-masonry-component v1.0.1
+ * vue-masonry-component v1.0.12
  * (c) Guillaume Marchand
  * Released under the ISC License.
  */
@@ -240,7 +240,7 @@ var VueMasonryComponent = normalizeComponent_1({
 
 var MasonryComponent = {
   install: function install(Vue, options) {
-    Vue.component('masonry-component', VueMasonryComponent);
+    Vue.component('masonry', VueMasonryComponent);
   }
 };
 

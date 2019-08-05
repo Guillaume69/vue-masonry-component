@@ -23,5 +23,9 @@
   "devDependencies": {
     "rollup-plugin-vue": "^5.0.1",
     "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "masonry-layout": "^4.2.2",
+    "imagesloaded": "^4.1.4"
   }
 }

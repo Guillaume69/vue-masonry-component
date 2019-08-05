@@ -1,5 +1,5 @@
 /*!
- * vue-masonry-component v1.0.0
+ * vue-masonry-component v1.0.1
  * (c) Guillaume Marchand
  * Released under the ISC License.
  */

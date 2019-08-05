@@ -16,8 +16,7 @@ in you main.js
     
 ```js
 import Vue from 'vue'
-
-import VueMasonryComponent from 'vue-masonry-component';
+import VueMasonryComponent from 'vue-masonry-component'
 
 Vue.use(VueMasonryComponent)
 ```

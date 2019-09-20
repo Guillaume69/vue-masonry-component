@@ -98,6 +98,7 @@ export default {
       _this.masonry.on('layoutComplete', function (laidOutItems) {
         _this.$emit('layoutComplete', laidOutItems)
       })
+      _this.$emit('loaded');
     })
   },
   data () {

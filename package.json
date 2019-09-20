@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Guillaume69/vue-masonry-component#readme",
   "devDependencies": {
+    "bili": "^4.8.1",
     "rollup-plugin-vue": "^5.0.1",
     "vue-template-compiler": "^2.6.10"
   },

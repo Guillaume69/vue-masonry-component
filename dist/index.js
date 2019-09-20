@@ -1,5 +1,5 @@
 /*!
- * vue-masonry-component v1.0.12
+ * vue-masonry-component v1.0.13
  * (c) Guillaume Marchand
  * Released under the ISC License.
  */
@@ -98,6 +98,8 @@ var script = {
       _this.masonry.on('layoutComplete', function (laidOutItems) {
         _this.$emit('layoutComplete', laidOutItems);
       });
+
+      _this.$emit('loaded');
     });
   },
   data: function data() {

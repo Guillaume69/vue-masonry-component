@@ -1,7 +1,7 @@
 <template>
   <div
     class="grid"
-    id="masonry-container"
+    :id="containerId"
   >
     <slot />
   </div>
@@ -14,6 +14,10 @@ import ImageLoaded from 'imagesloaded'
 export default {
   name: 'VueMasonryComponent',
   props: {
+    containerId: {
+      type: String,
+      default: 'masonry-container'
+    },
     itemSelector: {
       type: String,
       default: '.grid-item'
@@ -75,7 +79,7 @@ export default {
   },
   mounted () {
     const _this = this
-    ImageLoaded('#masonry-container', function (instance) {
+    ImageLoaded('#' + this.containerId, function (instance) {
       _this.masonry = new Masonry('.grid', {
         itemSelector: _this.itemSelector,
         columnWidth: _this.columnWidth,

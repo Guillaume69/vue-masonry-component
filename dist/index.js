@@ -14,6 +14,10 @@ var ImageLoaded = _interopDefault(require('imagesloaded'));
 var script = {
   name: 'VueMasonryComponent',
   props: {
+    containerId: {
+      type: String,
+      "default": 'masonry-container'
+    },
     itemSelector: {
       type: String,
       "default": '.grid-item'
@@ -78,7 +82,7 @@ var script = {
   mounted: function mounted() {
     var _this = this;
 
-    ImageLoaded('#masonry-container', function (instance) {
+    ImageLoaded('#' + this.containerId, function (instance) {
       _this.masonry = new Masonry('.grid', {
         itemSelector: _this.itemSelector,
         columnWidth: _this.columnWidth,
@@ -213,7 +217,7 @@ var __vue_render__ = function __vue_render__() {
   return _c('div', {
     staticClass: "grid",
     attrs: {
-      "id": "masonry-container"
+      "id": _vm.containerId
     }
   }, [_vm._t("default")], 2);
 };

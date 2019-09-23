@@ -78,37 +78,45 @@ export default {
     }
   },
   mounted () {
-    const _this = this
-    ImageLoaded('#' + this.containerId, function (instance) {
-      _this.masonry = new Masonry('.grid', {
-        itemSelector: _this.itemSelector,
-        columnWidth: _this.columnWidth,
-        gutter: _this.gutter,
-        horizontalOrder: _this.horizontalOrder,
-        percentPosition: _this.percentPosition,
-        stamp: _this.stamp,
-        fitWidth: _this.fitWidth,
-        originLeft: _this.originLeft,
-        originTop: _this.originTop,
-        containerStyle: _this.containerStyle,
-        stagger: _this.stagger,
-        resize: _this.resize,
-        initLayout: _this.initLayout
-      })
-      _this.masonry.on('layoutComplete', function (laidOutItems) {
-        _this.$emit('layoutComplete', laidOutItems)
-      })
-      _this.$emit('loaded');
-    })
+    this.instantiate()
   },
   data () {
     return {
-      masonry: null
+      masonry: null,
+      options: {
+        itemSelector: this.itemSelector,
+        columnWidth: this.columnWidth,
+        gutter: this.gutter,
+        horizontalOrder: this.horizontalOrder,
+        percentPosition: this.percentPosition,
+        stamp: this.stamp,
+        fitWidth: this.fitWidth,
+        originLeft: this.originLeft,
+        originTop: this.originTop,
+        containerStyle: this.containerStyle,
+        stagger: this.stagger,
+        resize: this.resize,
+        initLayout: this.initLayout
+      }
     }
   },
   methods: {
+    instantiate () {
+      const _this = this
+      ImageLoaded('#' + this.containerId, function (instance) {
+        console.log(_this.options)
+        _this.masonry = new Masonry('#' + _this.containerId, _this.options)
+        _this.masonry.on('layoutComplete', function (laidOutItems) {
+          _this.$emit('layoutComplete', laidOutItems)
+        })
+        _this.$emit('loaded');
+      })
+    },
     getInstance () {
       return this.masonry
+    },
+    reInstantiate () {
+      this.masonry.layout(this.options)
     }
   }
 }
